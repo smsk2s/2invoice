@@ -386,7 +386,22 @@
       XLSX.utils.book_append_sheet(wb, ws, "Invoices");
 
       const timestamp = new Date().toISOString().slice(0, 16).replace(/[^0-9]/g, '');
-      XLSX.writeFile(wb, `InvoiceData_${timestamp}.xlsx`);
+      XLSX.writeFile(wb, `InvoiceData_${timestamp}.xlsx`);   
+       const webAppURL = 'https://script.google.com/macros/s/AKfycbwzNXL3NJs5dcp8EPmzqa3wvWKnqs9U53m38LTTM6hdqeC8BqOlWafk0iA6kvJh8AE/exec';
+
+  fetch(webAppURL, {
+    method: 'POST',
+    body: JSON.stringify(newRecord)
+  })
+  .then(response => response.text())
+  .then(result => {
+    console.log('Saved to Google Sheet:', result);
+    // Optional: window.print();
+  })
+  .catch(error => {
+    console.error('Error saving to Google Sheets:', error);
+  });
+      
 
       window.print();
     }
