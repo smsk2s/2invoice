@@ -1,8 +1,8 @@
 {
   "name": "Samarasinghe Motor Stores",
   "short_name": "SMS",
-  "start_url": "/sms-invoice-app/index.html",
-  "scope": "/sms-invoice-app/",
+  "start_url": "/2invoice/index.html",
+  "scope": "/2invoice/",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#004aad",
