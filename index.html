@@ -390,7 +390,7 @@
       const timestamp = new Date().toISOString().slice(0, 16).replace(/[^0-9]/g, '');
       XLSX.writeFile(wb, `InvoiceData_${timestamp}.xlsx`);
 // ✅ 2. Save to Google Sheet
-  const webAppURL = 'https://script.google.com/macros/s/AKfycbwyosRvckSHsbZeCXTD8-7PjgKDYKIQGYNzTT0I0PM/dev';
+  const webAppURL = 'https://script.google.com/macros/s/AKfycbxWIPASOMEeY75plQMZbaoa1wTGPEsjZV_LRt83ZvQYgg31XGsMHhEtJN0WQHU0WeV60Q/exec';
 
   fetch(webAppURL, {
     method: 'POST',
